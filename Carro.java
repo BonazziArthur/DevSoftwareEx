@@ -21,6 +21,8 @@ public class Carro {
     // Retorna a quantidade efetivamente abastecida
     public int abastece(TipoCombustivel tipoCombustivel, int quantidade) {
         int capacidadeLivre = tanque.getCapacidade() - tanque.getCombustivelDisponivel();
+        
+
         if (capacidadeLivre < quantidade) {
             tanque.abastece(tipoCombustivel, capacidadeLivre);
             return capacidadeLivre;
@@ -28,6 +30,9 @@ public class Carro {
             tanque.abastece(tipoCombustivel, quantidade);
             return quantidade;
         }
+    }
+
+    private void setCombustivel(int i) {
     }
 
     // Retorna a distancia que consegue viajar com o combustivel remanescente
